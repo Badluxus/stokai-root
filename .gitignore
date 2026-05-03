@@ -1,5 +1,6 @@
 stokai-front/
 stock-ai-backend/
+uploads/
 .idea/
 .vscode/
 *.log
