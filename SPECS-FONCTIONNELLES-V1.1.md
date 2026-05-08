@@ -667,17 +667,15 @@ stokai-front/
 | [MARCHAND] Gestion stock (entrées/sorties) | ✅ FAIT | Critique |
 | [MARCHAND] Création Boutique (onboarding) | ✅ FAIT | Critique |
 | [MARCHAND] Liste ventes & Analyse profit | ✅ FAIT | Critique |
-| [MARCHAND] Détail commande + changement statut | ⏳ À FAIRE | Critique |
-| [MARCHAND] Vente directe (POS simplifié) | ⏳ À FAIRE | Haute |
+| [MARCHAND] Détail commande + changement statut | ✅ FAIT | Critique |
+| [MARCHAND] Vente directe (POS simplifié) | ✅ FAIT | Haute |
 | [MARCHAND] Paramètres boutique | ⏳ À FAIRE | Haute |
 | [MARCHAND] Mon abonnement | ⏳ À FAIRE | Haute |
-| [CLIENT] Accueil (boutiques proches / catégories) | ⏳ À FAIRE | Critique |
-| [CLIENT] Fiche boutique + catalogue | ⏳ À FAIRE | Critique |
-| [CLIENT] Fiche produit | ⏳ À FAIRE | Critique |
-| [CLIENT] Panier | ⏳ À FAIRE | Critique |
-| [CLIENT] Passage de commande (adresse + paiement) | ⏳ À FAIRE | Critique |
-| [CLIENT] Suivi commandes | ⏳ À FAIRE | Critique |
-| [CLIENT] Profil + historique achats | ⏳ À FAIRE | Haute |
+| [CLIENT] Marketplace (accueil, boutiques, catalogue) | ✅ FAIT | Critique |
+| [CLIENT] Panier & Gestion quantités | ✅ FAIT | Critique |
+| [CLIENT] Passage de commande (adresse + paiement) | ✅ FAIT | Critique |
+| [CLIENT] Suivi commandes & Historique | ✅ FAIT | Critique |
+| [SYSTEM] Guards de sécurité & Rôles | ✅ FAIT | Critique |
 | Notifications push (FCM + Capacitor Push Plugin) | ⏳ À FAIRE | Haute |
 | Mode offline (SQLite local + sync) | ⏳ À FAIRE | Haute |
 
@@ -726,10 +724,12 @@ stokai-front/
 12. Configurer Ionic dans apps/mobile (app.component.ts, main.ts, styles) ✅ FAIT
 13. Créer les modèles TypeScript dans libs/shared ✅ FAIT
 14. Développer les écrans d'inscription et connexion dans l'app mobile ✅ FAIT
-15. Résoudre l'erreur d'injection Spring (AuthService bean missing) 🔄 EN COURS
-16. Implémenter le scan réel de code-barres (Capacitor Barcode Scanner) ⏳ À FAIRE
-17. Finaliser la persistance du prix d'achat dans les lignes de commande ⏳ À FAIRE
-18. Initialiser les dépôts Git et faire les premiers commits ✅ FAIT
+15. Résoudre l'erreur d'injection Spring (AuthService bean missing) ✅ FAIT (Fix .env path)
+16. Implémenter le parcours client complet (Marketplace, Panier, Commande) ✅ FAIT
+17. Implémenter le détail des commandes & POS marchand ✅ FAIT
+18. Sécuriser les routes avec des Guards (Auth, Role) ✅ FAIT
+19. Développer le Dashboard Admin Web 🔄 EN COURS
+20. Configurer les notifications push ⏳ À FAIRE
 
 ---
 
