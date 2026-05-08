@@ -676,6 +676,7 @@ stokai-front/
 | [CLIENT] Passage de commande (adresse + paiement) | ✅ FAIT | Critique |
 | [CLIENT] Suivi commandes & Historique | ✅ FAIT | Critique |
 | [SYSTEM] Guards de sécurité & Rôles | ✅ FAIT | Critique |
+| [SYSTEM] Design System & Tokens (Mobile/Web) | ✅ FAIT | Haute |
 | Notifications push (FCM + Capacitor Push Plugin) | ⏳ À FAIRE | Haute |
 | Mode offline (SQLite local + sync) | ⏳ À FAIRE | Haute |
 
@@ -683,8 +684,8 @@ stokai-front/
 
 | Écran / Feature | Statut | Priorité |
 |---|---|---|
-| Layout principal (sidebar, header, routing) | ⏳ À FAIRE | Critique |
-| Dashboard KPIs (MRR, abonnés, churn, inscriptions) | ⏳ À FAIRE | Critique |
+| Layout principal (sidebar, header, routing) | ✅ FAIT | Critique |
+| Dashboard KPIs (MRR, abonnés, churn, inscriptions) | ✅ FAIT | Critique |
 | Liste et gestion des utilisateurs | ⏳ À FAIRE | Haute |
 | Gestion des abonnements | ⏳ À FAIRE | Haute |
 | Modération boutiques / produits | ⏳ À FAIRE | Moyenne |
@@ -704,8 +705,8 @@ stokai-front/
 | services/api.service.ts | HttpClient base (baseUrl, headers, error handling) | ✅ FAIT |
 | services/auth.service.ts | JWT storage, currentUser$, isLoggedIn() | ✅ FAIT |
 | interceptors/auth.interceptor.ts | Inject Bearer token sur chaque requête HTTP | ✅ FAIT |
-| guards/auth.guard.ts | Redirection si non authentifié | ⏳ À FAIRE |
-| guards/role.guard.ts | Redirection si rôle insuffisant | ⏳ À FAIRE |
+| guards/auth.guard.ts | Redirection si non authentifié | ✅ FAIT |
+| guards/role.guard.ts | Redirection si rôle insuffisant | ✅ FAIT |
 | index.ts | Barrel export de tous les éléments de la lib | ✅ FAIT |
 
 ### 11.6 Prochaines étapes immédiates (par ordre de priorité)
@@ -728,8 +729,9 @@ stokai-front/
 16. Implémenter le parcours client complet (Marketplace, Panier, Commande) ✅ FAIT
 17. Implémenter le détail des commandes & POS marchand ✅ FAIT
 18. Sécuriser les routes avec des Guards (Auth, Role) ✅ FAIT
-19. Développer le Dashboard Admin Web 🔄 EN COURS
-20. Configurer les notifications push ⏳ À FAIRE
+| 19. Développer le Dashboard Admin Web | ✅ FAIT |
+| 20. Intégration complète Design System (Tokens) | ✅ FAIT |
+| 21. Configurer les notifications push | ⏳ À FAIRE |
 
 ---
 
