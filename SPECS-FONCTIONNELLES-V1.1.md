@@ -731,7 +731,9 @@ stokai-front/
 18. Sécuriser les routes avec des Guards (Auth, Role) ✅ FAIT
 | 19. Développer le Dashboard Admin Web | ✅ FAIT |
 | 20. Intégration complète Design System (Tokens) | ✅ FAIT |
-| 21. Configurer les notifications push | ⏳ À FAIRE |
+| 21. Nettoyage Mockups & Connexion Stats réelles | ✅ FAIT |
+| 22. Page Détail Boutique client | ✅ FAIT |
+| 23. Configurer les notifications push | ⏳ À FAIRE |
 
 ---
 
