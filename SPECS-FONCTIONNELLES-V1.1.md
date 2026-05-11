@@ -105,6 +105,10 @@ L'application mobile unique gère trois rôles distincts. Un utilisateur peut cu
 - Adresse (quartier, commune), géolocalisation optionnelle
 - Horaires d'ouverture par jour de semaine
 - Modes de paiement acceptés (Wave, Orange Money, Cash)
+- **Configuration Livraison** : 
+    - Activation/Désactivation de la livraison
+    - Frais de livraison personnalisables (ex: 1 500 F)
+    - Seuil de livraison gratuite (ex: dès 50 000 F)
 - Statut de la boutique : Ouverte / Fermée temporairement / Définitivement fermée
 
 #### 3.2.2 Multi-boutique (plan Pro et +)
@@ -189,6 +193,7 @@ L'application mobile unique gère trois rôles distincts. Un utilisateur peut cu
 - Fiche produit : photos, description, prix, disponibilité en temps réel
 - Ajout au panier (multi-boutique non supporté dans le même panier)
 - Panier : modification quantités, suppression d'articles, affichage sous-total
+- **Calcul Livraison Dynamique** : Frais de livraison calculés selon les paramètres de la boutique (gratuit si seuil atteint)
 
 #### 3.5.3 Passage de commande
 
@@ -669,9 +674,11 @@ stokai-front/
 | [MARCHAND] Liste ventes & Analyse profit | ✅ FAIT | Critique |
 | [MARCHAND] Détail commande + changement statut | ✅ FAIT | Critique |
 | [MARCHAND] Vente directe (POS simplifié) | ✅ FAIT | Haute |
-| [MARCHAND] Paramètres boutique | ⏳ À FAIRE | Haute |
+| [MARCHAND] Paramètres boutique & Livraison | ✅ FAIT | Haute |
 | [MARCHAND] Mon abonnement | ⏳ À FAIRE | Haute |
 | [CLIENT] Marketplace (accueil, boutiques, catalogue) | ✅ FAIT | Critique |
+| [CLIENT] Détail Boutique & Liste produits | ✅ FAIT | Critique |
+| [CLIENT] Détail Produit (Premium UX + Qté) | ✅ FAIT | Critique |
 | [CLIENT] Panier & Gestion quantités | ✅ FAIT | Critique |
 | [CLIENT] Passage de commande (adresse + paiement) | ✅ FAIT | Critique |
 | [CLIENT] Suivi commandes & Historique | ✅ FAIT | Critique |
@@ -686,10 +693,11 @@ stokai-front/
 |---|---|---|
 | Layout principal (sidebar, header, routing) | ✅ FAIT | Critique |
 | Dashboard KPIs (MRR, abonnés, churn, inscriptions) | ✅ FAIT | Critique |
-| Liste et gestion des utilisateurs | ⏳ À FAIRE | Haute |
-| Gestion des abonnements | ⏳ À FAIRE | Haute |
+| Liste et gestion des utilisateurs | ✅ FAIT | Critique |
+| Notifications et Paramètres système | ✅ FAIT | Haute |
+| Gestion des abonnements | ✅ FAIT | Haute |
 | Modération boutiques / produits | ⏳ À FAIRE | Moyenne |
-| Paramétrage plans (prix, limites) | ⏳ À FAIRE | Haute |
+| Paramétrage plans (prix, limites) | ✅ FAIT | Haute |
 | Export comptable transactions | ⏳ À FAIRE | Moyenne |
 | Authentification admin sécurisée (rôle ADMIN) | ⏳ À FAIRE | Critique |
 
@@ -733,7 +741,12 @@ stokai-front/
 | 20. Intégration complète Design System (Tokens) | ✅ FAIT |
 | 21. Nettoyage Mockups & Connexion Stats réelles | ✅ FAIT |
 | 22. Page Détail Boutique client | ✅ FAIT |
-| 23. Configurer les notifications push | ⏳ À FAIRE |
+| 23. Gestion des utilisateurs (Liste, Détails, Suspendre) | ✅ FAIT |
+| 24. Système de notifications & Paramètres Admin | ✅ FAIT |
+| 25. Configuration des paramètres de livraison (Backend + Migration V14) | ✅ FAIT |
+| 26. Optimisation UX (Hiding scrollbars, Full-width design) | ✅ FAIT |
+| 27. Accessibilité (A11y, Alt text, Keyboard navigation) | ✅ FAIT |
+| 28. Configurer les notifications push natives | ⏳ À FAIRE |
 
 ---
 
