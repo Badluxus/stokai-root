@@ -85,8 +85,9 @@ L'application mobile unique gère trois rôles distincts. Un utilisateur peut cu
 #### 3.1.1 Inscription / Connexion
 
 - Inscription via numéro de téléphone + code OTP (6 chiffres, validité 5 min)
+- Ergonomie : Autofocus sur les champs critiques et validation par touche "Entrée" (mobile-friendly)
 - Option e-mail + mot de passe en complément
-- Connexion persistante avec refresh token JWT (7 jours)
+- Connexion persistante avec refresh token JWT (30 jours)
 - Déconnexion depuis n'importe quel appareil
 - Récupération de compte : renvoi OTP ou lien e-mail
 
@@ -182,8 +183,8 @@ L'application mobile unique gère trois rôles distincts. Un utilisateur peut cu
 
 #### 3.5.1 Découverte des boutiques
 
-- Page d'accueil : boutiques proches (géoloc) ou par catégorie
-- Moteur de recherche : par nom de boutique ou de produit
+- Page d'accueil (Marketplace) : Design Premium avec bannières promotionnelles 3D, arrière-plans mesh et navigation par catégories horizontales (pilules).
+- Moteur de recherche : Page dédiée avec historique de recherche local et suggestions par tendances.
 - Fiche boutique : logo, description, horaires, avis, catalogue
 - Favoris : enregistrer ses boutiques préférées
 
@@ -300,7 +301,7 @@ Un commerçant dépassant la limite du plan reçoit une notification et a 7 jour
 
 - Toutes les communications passent par HTTPS/TLS 1.3.
 - Les mots de passe sont hachés avec BCrypt (coût 12).
-- Les tokens JWT ont une durée de vie de 1h (access) et 7 jours (refresh).
+- Les tokens JWT ont une durée de vie configurable : 24h (access) et 30 jours (refresh) pour limiter les reconnexions mobiles.
 - Rate limiting sur les endpoints publics : 100 requêtes / minute / IP.
 - Les données de paiement ne transitent jamais par le backend STOKAI (délégation totale à PayDunya/CinetPay).
 
@@ -677,6 +678,7 @@ stokai-front/
 | [MARCHAND] Paramètres boutique & Livraison | ✅ FAIT | Haute |
 | [MARCHAND] Mon abonnement | ⏳ À FAIRE | Haute |
 | [CLIENT] Marketplace (accueil, boutiques, catalogue) | ✅ FAIT | Critique |
+| [CLIENT] Moteur de recherche (page dédiée + historique) | ✅ FAIT | Critique |
 | [CLIENT] Détail Boutique & Liste produits | ✅ FAIT | Critique |
 | [CLIENT] Détail Produit (Premium UX + Qté) | ✅ FAIT | Critique |
 | [CLIENT] Panier & Gestion quantités | ✅ FAIT | Critique |
@@ -746,7 +748,9 @@ stokai-front/
 | 25. Configuration des paramètres de livraison (Backend + Migration V14) | ✅ FAIT |
 | 26. Optimisation UX (Hiding scrollbars, Full-width design) | ✅ FAIT |
 | 27. Accessibilité (A11y, Alt text, Keyboard navigation) | ✅ FAIT |
-| 28. Configurer les notifications push natives | ⏳ À FAIRE |
+| 28. Refonte visuelle Marketplace & Recherche | ✅ FAIT |
+| 29. Migration vers Angular Signals (Merchant/Client) | ✅ FAIT |
+| 30. Configurer les notifications push natives | ⏳ À FAIRE |
 
 ---
 
