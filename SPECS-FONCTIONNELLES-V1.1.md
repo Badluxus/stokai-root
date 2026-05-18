@@ -607,7 +607,7 @@ stokai-front/
 | Tâche | Statut | Notes |
 |---|---|---|
 | Création projet Spring Boot (Initializr) | ✅ FAIT | Java 21, Maven, dépendances de base sélectionnées |
-| Configuration dépendances Maven (pom.xml) | ✅ FAIT | Ajout manuel MapStruct / Firebase / Africa's Talking OK |
+| Configuration dépendances Maven (pom.xml) | ✅ FAIT | Ajout manuel MapStruct / Firebase / Africa's Talking / Cloudinary OK |
 | Création Nx monorepo (stokai-front) | ✅ FAIT | Workspace initialisé avec preset apps |
 | App Angular admin-web | ✅ FAIT | Générée avec esbuild, vitest, cypress, SCSS |
 | App mobile (Angular + Ionic) | ✅ FAIT | Générée et buildée avec succès |
@@ -615,8 +615,9 @@ stokai-front/
 | Capacitor Android configuré | ✅ FAIT | cap sync android OK, cap doctor : Android looking great |
 | Capacitor iOS configuré | ⏳ À FAIRE | Nécessite un Mac |
 | Docker Compose (dev) | ✅ FAIT | PostgreSQL + Redis + backend |
-| CI/CD GitHub Actions | ⏳ À FAIRE | Pipeline build + test + deploy |
-| Hébergement VPS production | ⏳ À FAIRE | À configurer avant mise en production |
+| CI/CD Auto-Deploy (Production) | ✅ FAIT | CI/CD automatisé sur Vercel (Frontend) et Render (Backend) à chaque push |
+| Hébergement Production Cloud | ✅ FAIT | API Spring Boot en HTTPS sur Render, PWA Mobile sur Vercel, PostgreSQL managé sur Render |
+| Hébergement des Médias (Cloudinary) | ✅ FAIT | Stockage robuste et persistant des images produits sur Cloudinary |
 
 ### 11.2 Backend — Modules à développer
 
@@ -751,6 +752,11 @@ stokai-front/
 | 28. Refonte visuelle Marketplace & Recherche | ✅ FAIT |
 | 29. Migration vers Angular Signals (Merchant/Client) | ✅ FAIT |
 | 30. Configurer les notifications push natives | ✅ FAIT |
+| 31. Intégration de Cloudinary pour le stockage d'images robuste | ✅ FAIT |
+| 32. Optimisation du boot de démarrage Spring Boot sur Render (Lazy Init) | ✅ FAIT |
+| 33. Auto-refresh réactif de la liste des produits (ionViewWillEnter) | ✅ FAIT |
+| 34. Fix de l'icône corbeille et des doubles chevrons de navigation iOS | ✅ FAIT |
+| 35. Intégration de la passerelle de paiement PayDunya | 🔄 EN COURS |
 
 ---
 
