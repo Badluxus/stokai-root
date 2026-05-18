@@ -6,7 +6,7 @@
 |---|---|
 | Type | Spécifications Fonctionnelles |
 | Version | v1.1 — Mai 2026 |
-| Auteur | Badluxus — Finappli |
+| Auteur | Badluxus |
 | Statut | Brouillon initial |
 
 ---
@@ -614,7 +614,7 @@ stokai-front/
 | Lib partagée (libs/shared) | ✅ FAIT | Générée, buildable, path alias @stokai/shared configuré |
 | Capacitor Android configuré | ✅ FAIT | cap sync android OK, cap doctor : Android looking great |
 | Capacitor iOS configuré | ⏳ À FAIRE | Nécessite un Mac |
-| Docker Compose (dev) | ⏳ À FAIRE | PostgreSQL + Redis + backend |
+| Docker Compose (dev) | ✅ FAIT | PostgreSQL + Redis + backend |
 | CI/CD GitHub Actions | ⏳ À FAIRE | Pipeline build + test + deploy |
 | Hébergement VPS production | ⏳ À FAIRE | À configurer avant mise en production |
 
@@ -646,7 +646,7 @@ stokai-front/
 | commande | Auto-annulation après 30 min sans réponse | ✅ FAIT | Haute |
 | notification | Intégration Firebase FCM (push) | ✅ FAIT | Haute |
 | notification | Intégration Africa's Talking (SMS) | ✅ FAIT | Haute |
-| notification | Templates e-mail (Resend/Brevo) | ⏳ À FAIRE | Moyenne |
+| notification | Templates e-mail (Resend/Brevo) | ✅ FAIT | Moyenne |
 | abonnement | Entités Abonnement, Paiement, PlanConfig | ✅ FAIT | Haute |
 | abonnement | Intégration CinetPay / PayDunya webhook | ✅ FAIT | Haute |
 | abonnement | Logique de limites par plan (middleware) | ✅ FAIT | Haute |
@@ -659,10 +659,10 @@ stokai-front/
 |---|---|---|
 | Configuration Ionic dans app.component.ts | ✅ FAIT | Critique |
 | Structure routing (auth / merchant / client) | ✅ FAIT | Critique |
-| Écran Splash / Onboarding | ⏳ À FAIRE | Haute |
+| Écran Splash / Onboarding | ✅ FAIT | Haute |
 | Écran Inscription (numéro de téléphone) | ✅ FAIT | Critique |
 | Écran Vérification OTP | ✅ FAIT | Critique |
-| Écran Connexion (e-mail + mot de passe) | ⏳ À FAIRE | Critique |
+| Écran Connexion (e-mail + mot de passe) | ✅ FAIT | Critique |
 | Écran Choix de rôle (commerçant / client) | ✅ FAIT | Critique |
 | Système de thème (Dark Mode / Couleurs) | ✅ FAIT | Moyenne |
 | Modèles TypeScript partagés (libs/shared) | ✅ FAIT | Critique |
@@ -676,7 +676,7 @@ stokai-front/
 | [MARCHAND] Détail commande + changement statut | ✅ FAIT | Critique |
 | [MARCHAND] Vente directe (POS simplifié) | ✅ FAIT | Haute |
 | [MARCHAND] Paramètres boutique & Livraison | ✅ FAIT | Haute |
-| [MARCHAND] Mon abonnement | ⏳ À FAIRE | Haute |
+| [MARCHAND] Mon abonnement | ✅ FAIT | Haute |
 | [CLIENT] Marketplace (accueil, boutiques, catalogue) | ✅ FAIT | Critique |
 | [CLIENT] Moteur de recherche (page dédiée + historique) | ✅ FAIT | Critique |
 | [CLIENT] Détail Boutique & Liste produits | ✅ FAIT | Critique |
@@ -686,8 +686,8 @@ stokai-front/
 | [CLIENT] Suivi commandes & Historique | ✅ FAIT | Critique |
 | [SYSTEM] Guards de sécurité & Rôles | ✅ FAIT | Critique |
 | [SYSTEM] Design System & Tokens (Mobile/Web) | ✅ FAIT | Haute |
-| Notifications push (FCM + Capacitor Push Plugin) | ⏳ À FAIRE | Haute |
-| Mode offline (SQLite local + sync) | ⏳ À FAIRE | Haute |
+| Notifications push (FCM + Capacitor Push Plugin) | ✅ FAIT | Haute |
+| Mode offline (SQLite local + sync) | ✅ FAIT | Haute |
 
 ### 11.4 Frontend Admin (apps/admin-web)
 
@@ -698,10 +698,10 @@ stokai-front/
 | Liste et gestion des utilisateurs | ✅ FAIT | Critique |
 | Notifications et Paramètres système | ✅ FAIT | Haute |
 | Gestion des abonnements | ✅ FAIT | Haute |
-| Modération boutiques / produits | ⏳ À FAIRE | Moyenne |
+| Modération boutiques / produits | ✅ FAIT | Moyenne |
 | Paramétrage plans (prix, limites) | ✅ FAIT | Haute |
-| Export comptable transactions | ⏳ À FAIRE | Moyenne |
-| Authentification admin sécurisée (rôle ADMIN) | ⏳ À FAIRE | Critique |
+| Export comptable transactions | ✅ FAIT | Moyenne |
+| Authentification admin sécurisée (rôle ADMIN) | ✅ FAIT | Critique |
 
 ### 11.5 Lib Partagée (libs/shared)
 
@@ -750,7 +750,7 @@ stokai-front/
 | 27. Accessibilité (A11y, Alt text, Keyboard navigation) | ✅ FAIT |
 | 28. Refonte visuelle Marketplace & Recherche | ✅ FAIT |
 | 29. Migration vers Angular Signals (Merchant/Client) | ✅ FAIT |
-| 30. Configurer les notifications push natives | ⏳ À FAIRE |
+| 30. Configurer les notifications push natives | ✅ FAIT |
 
 ---
 

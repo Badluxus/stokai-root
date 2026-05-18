@@ -1,0 +1,73 @@
+version: '3.8'
+
+services:
+  # Database Service (PostgreSQL)
+  postgres:
+    image: postgres:16-alpine
+    container_name: stockai-postgres
+    restart: unless-stopped
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_DB: stockai_dev
+      POSTGRES_USER: stockai_user
+      POSTGRES_PASSWORD: admin
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U stockai_user -d stockai_dev"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+    networks:
+      - stockai-network
+
+  # Cache Service (Redis)
+  redis:
+    image: redis:7-alpine
+    container_name: stockai-redis
+    restart: unless-stopped
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    networks:
+      - stockai-network
+
+  # Spring Boot Backend Service
+  backend:
+    build:
+      context: ./stock-ai-backend
+      dockerfile: Dockerfile
+    container_name: stockai-backend
+    restart: unless-stopped
+    ports:
+      - "8080:8080"
+    environment:
+      - DB_URL=jdbc:postgresql://postgres:5432/stockai_dev
+      - DB_USER=stockai_user
+      - DB_PASSWORD=admin
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
+      - JWT_SECRET=7a374523317734415053535254582326312458763248375638
+      - AT_USERNAME=sandbox
+      - AT_API_KEY=atsk_23c3191927acbe921cc7d29055c20147b1457c4387510e9931da781313a3a5a92b8ddeb3
+      - AT_SENDER_ID=sandbox
+      - RESEND_API_KEY=re_gPoK2ArZ_PUKmeuLXrvNKcTToqyW5ed3a
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_started
+    networks:
+      - stockai-network
+
+volumes:
+  postgres_data:
+    driver: local
+  redis_data:
+    driver: local
+
+networks:
+  stockai-network:
+    driver: bridge
