@@ -62,6 +62,21 @@ services:
     networks:
       - stockai-network
 
+  # Frontend Service (Caddy)
+  frontend:
+    image: caddy:alpine
+    container_name: stockai-frontend
+    restart: unless-stopped
+    ports:
+      - "8092:80"
+    volumes:
+      - /home/sada/projects/stockai/dist:/usr/share/caddy
+      - ./Caddyfile:/etc/caddy/Caddyfile
+    depends_on:
+      - backend
+    networks:
+      - stockai-network
+
 volumes:
   postgres_data:
     driver: local

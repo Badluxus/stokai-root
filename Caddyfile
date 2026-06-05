@@ -1,0 +1,29 @@
+:80 {
+    # ----------------------------------------------------
+    #  FRONTEND: Mobile App
+    # ----------------------------------------------------
+    handle_path /mobile* {
+        root * /usr/share/caddy/mobile
+        try_files {path} /index.html
+        file_server
+    }
+
+    # ----------------------------------------------------
+    #  FRONTEND: Admin Web
+    # ----------------------------------------------------
+    handle_path /admin* {
+        root * /usr/share/caddy/admin-web
+        try_files {path} /index.html
+        file_server
+    }
+
+    # ----------------------------------------------------
+    #  BACKEND API: Proxy requests to Spring Boot
+    # ----------------------------------------------------
+    handle_path /api* {
+        reverse_proxy backend:8080
+    }
+
+    # Redirection par défaut (si on tape l'IP sans rien) vers l'application mobile
+    redir / /mobile/
+}
